@@ -8,6 +8,7 @@ html {
   font-family: cursive;
   font-weight: bold;
 }
+
 #search {
   float: right;
   margin-right: 20px;
@@ -46,4 +47,5 @@ h1 {
   width: 800px;
   border: 2px dotted red;
   padding: 20px;
+  background-color: #F5DA81;
 }
