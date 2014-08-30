@@ -1,0 +1,45 @@
+html {
+  background-color: #ffcb08;
+  font-family: Helvetica;
+}
+#nav {
+  display: inline-block;
+    padding: 20px;
+  font-family: cursive;
+  font-weight: bold;
+}
+#search {
+  float: right;
+  margin-right: 20px;
+}
+.personal{
+  float:right;
+  display: block;
+}
+
+#photo {
+  height: 250px;
+  width: 375px;
+}
+#about-me {
+  width: 375px;
+}
+.links {
+  display: block;
+  text-align: right;
+  margin: 60px;
+}
+
+.post-title, h4 {
+  margin-left: 60px;
+}
+
+
+.post-text {
+  display: block;
+  text-align: left;
+  margin: 40px 40px 40px 60px;
+  width: 800px;
+  border: 2px dotted red;
+  padding: 20px;
+}
