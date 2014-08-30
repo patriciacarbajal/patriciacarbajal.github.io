@@ -29,13 +29,17 @@ html {
   text-align: right;
   margin: 60px;
 }
+h1 {
+  text-align: center;
+  margin-bottom: 150px;
+}
 
 .post-title, h4 {
   margin-left: 60px;
 }
 
 
-.post-text {
+#post-text {
   display: block;
   text-align: left;
   margin: 40px 40px 40px 60px;
