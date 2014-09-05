@@ -122,6 +122,9 @@ nav {
   margin: auto;
   float: none;
 }
-
+li {
+  display: block;
+  padding: 4% 0 4% 0;
+}
 }
 
