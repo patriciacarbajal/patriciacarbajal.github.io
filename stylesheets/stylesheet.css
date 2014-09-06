@@ -82,9 +82,8 @@ section h1 {
 }
 
 #about p {
-  width: 60%;
-  margin: auto;
-  text-align: left;
+display: block;
+  margin: 5% 0 0 20%;
   font-size: 1.25em;
 }
 
