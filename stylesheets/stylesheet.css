@@ -112,7 +112,6 @@ header {
   width: 80%;
   margin: auto;
   float: none;
-  background-color: red;
 }
 header img {
   width: 80%;
@@ -126,7 +125,7 @@ nav {
 }
 li {
   display: block;
-  padding: 4% 0 4% 0;
+  padding: 2% 0 2% 0;
 }
 }
 
