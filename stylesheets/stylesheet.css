@@ -94,6 +94,7 @@ section h1 {
   margin: 5% 0 0 20%;
   font-size: 1.25em;
 }
+
 #projects p {
   display: block;
   margin: 10% 0 0 20%;
@@ -111,6 +112,7 @@ header {
   width: 80%;
   margin: auto;
   float: none;
+  background-color: red;
 }
 header img {
   width: 80%;
