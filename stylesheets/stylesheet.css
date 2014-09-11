@@ -115,6 +115,9 @@ section h1 {
 @media screen only (max-width: 960px){
 header {
   font-size: 1em;
+  margin: 5% 25% 5% 25%;
+  width: 50%;
+  text-align: center;
 }
 /*header img {
   width: 80%;
