@@ -5,15 +5,19 @@ color: #black;
 }
 
 img {
+  position: absolute;
+  top: 5%;
   width: 20%;
-  margin: auto 40%;
+  margin: 0% 40% 0% 40%;
 }
 
 header {
+  position: absolute;
+  bottom: 10%;
   font-size: 2em;
   text-align: center;
   width: 50%;
-  margin: auto;
+  margin: 0% 25% 0% 25%;
   padding: 0 1% 0 1%;
 }
 #indexheader p {
@@ -21,8 +25,8 @@ header {
   margin: auto;
 }
 #white {
-  padding-left: 5%;
-  color: white;
+/*  padding-left: 5%;
+*/  color: white;
 }
 #nav {
   font-size: 1em;
