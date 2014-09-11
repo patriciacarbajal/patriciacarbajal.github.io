@@ -131,6 +131,10 @@ header {
   width: 50% !important;
   text-align: center !important;
 }
+
+#name {
+  margin-top: 30% !important;
+}
 /*header img {
   width: 80%;
   margin: auto;
