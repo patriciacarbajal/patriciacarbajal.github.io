@@ -7,17 +7,21 @@ color: #black;
 img {
   position: absolute;
   top: 5%;
+  left: 40%;
+  right: 40%;
   width: 20%;
-  margin: 0% 40% 0% 40%;
+
+  /*margin: 0% 40% 0% 40%;*/
 }
 
 header {
   position: absolute;
-  bottom: 10%;
+  top: 50%;
+  left: 25%;
+  right: 25%;
   font-size: 2em;
   text-align: center;
   width: 50%;
-  margin: 0% 25% 0% 25%;
   padding: 0 1% 0 1%;
 }
 #indexheader p {
