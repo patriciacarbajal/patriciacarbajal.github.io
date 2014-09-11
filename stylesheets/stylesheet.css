@@ -17,10 +17,10 @@ img {
 header {
 /*  display: block;
 */  font-size: 2em;
-  text-align: center;
-  width: 50%;
-  margin: 15% 25% 0% 25%;
-  padding: 0 1% 0 1%;
+  text-align: center !important;;
+  width: 50% !important;;
+  margin: 25% 25% 0% 25% !important;;
+  padding: 0 1% 0 1% !important;;
 }
 #indexheader p {
   color: red;
@@ -62,8 +62,11 @@ li {
 }
 
 #icons {
-width: 60%;
-float: right;
+width: 20%;
+/*float: right;*/
+position: absolute;
+top: 2%;
+right: 2%;
 }
 
 .fa {
