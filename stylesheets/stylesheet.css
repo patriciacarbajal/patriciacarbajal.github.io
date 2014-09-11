@@ -1,7 +1,4 @@
-/*html {
-    height: 100%;
-}
-*/
+
 body {
 font-family: 'Montserrat Alternates', sans-serif;
 color: #black;
@@ -9,8 +6,7 @@ color: #black;
 
 img {
   width: 20%;
-  margin: auto;
-  float: right;
+  margin: auto 40%;
 }
 
 header {
@@ -25,6 +21,7 @@ header {
   margin: auto;
 }
 #white {
+  padding-left: 5%;
   color: white;
 }
 #nav {
@@ -60,13 +57,14 @@ li {
 
 #icons {
 width: 60%;
-clear: both;
+float: right;
 }
 
 .fa {
   text-align: center;
   padding: 4%;
   float: right;
+  color: black;
 }
 
 
