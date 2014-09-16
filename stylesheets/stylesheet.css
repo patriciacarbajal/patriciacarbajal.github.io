@@ -89,9 +89,7 @@ right: 2% !important;
 
 footer {
    clear: both;
-   position:absolute;
-   bottom: 0%;
-   right: 2%;
+   text-align: right;
   }
 
 section h1 {
@@ -120,7 +118,6 @@ section h1 {
 
 #blog a {
   display: block;
-  margin: 10% 0 0 20%;
   font-size: 1.25em;
   color: black;
 }
