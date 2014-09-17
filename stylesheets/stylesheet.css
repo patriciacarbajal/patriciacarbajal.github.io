@@ -15,13 +15,12 @@ img {
 }
 
 header {
-/*  display: block;
-*/  font-size: 2em !important;
+  font-size: 2em !important;
   text-align: center !important;
   width: 50% !important;
   margin: 5% 25% 0% 25% !important;
   padding: 0 1% 0 1% !important;
-}*
+}
 #indexheader p {
   color: red;
   margin: auto;
@@ -148,4 +147,27 @@ li {
   padding: 2% 0 2% 0;
 }*/
 }
+
+  #blog-nav {
+  display: inline-block;
+  padding: 2%;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+#blogheader {
+  height: 40%;
+  width: 100%;
+  background-color: black;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  padding-top: 5%;
+  }
 
