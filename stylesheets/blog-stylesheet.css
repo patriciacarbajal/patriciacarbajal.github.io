@@ -40,17 +40,10 @@ header {
 }
 
 img {
-  width: 25%;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  width: 100%;
   }
 
-.links {
-  display: block;
-  text-align: right;
-  margin: 6%;
-}
+
 
 #title {
   text-align: center;
@@ -69,9 +62,8 @@ img {
   text-align: left;
   margin: auto;
   margin-bottom: 10%;
-  width: 60%;
+  width: 70%;
   border: 2px dotted red;
   padding: 2%;
 
-/*  background-color: #F5DA81;
-*/}
+}
