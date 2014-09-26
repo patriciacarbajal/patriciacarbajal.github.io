@@ -41,7 +41,7 @@ text-align: center !important;
 margin-left: 1%;
 }
 #nav {
-  font-size: 1em;
+  font-size: 1.75em;
   width: 50%;
   height: 100%;
   background-color: black;
@@ -62,11 +62,12 @@ a:hover {
 ul {
  list-style-type: none;
  height: 100%;
+
 }
 
 li {
   display: block;
-  padding: 4% 0 4% 0;
+  padding: 5% 0 5% 10%;
   margin: 0px;
   text-align: left;
 }
