@@ -44,6 +44,16 @@
   font-size: 1.5em;
 }
 
+#projects {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#about {
+  text-align: center;
+  font-size: 1.5em
+}
+
 a:hover {
   color: red;
 }
