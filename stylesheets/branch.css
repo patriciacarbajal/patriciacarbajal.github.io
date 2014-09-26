@@ -39,10 +39,19 @@
   text-align: center;
 }
 
+#contact {
+  text-align: center;
+  font-size: 1.5em;
+}
 
 a:hover {
   color: red;
 }
+
+.fa {
+color: black;
+}
+
 
 footer {
    clear: both;
