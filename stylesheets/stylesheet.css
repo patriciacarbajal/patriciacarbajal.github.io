@@ -4,6 +4,11 @@ font-family: 'Montserrat Alternates', sans-serif;
 color: #black;
 }
 
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 img {
   position: absolute;
   top: 5%;
@@ -84,8 +89,9 @@ right: 2% !important;
 }
 
 footer {
-   clear: both;
-   text-align: right;
+   position: absolute;
+   bottom: 0;
+   right: 0;
   }
 
 /*and (max-device-width: 667px)*/
@@ -120,11 +126,6 @@ li {
   padding: 25% 0 25% 0;
 }
 
-footer {
-  text-align: right;
-  margin-bottom: 2%;
-
-  }
 }
 
 
