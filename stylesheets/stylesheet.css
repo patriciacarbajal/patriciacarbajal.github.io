@@ -98,7 +98,7 @@ header {
  }
 
 h1 {
-  margin-top: 60% !important;
+  margin-top: 70% !important;
 }
 
 img {
@@ -113,9 +113,9 @@ nav {
   float: none;
 }
 li {
-  font-size: 1.5em;
+  font-size: 1.25em;
   display: block;
-  padding: 12% 0 12% 0;
+  padding: 20% 0 20% 0;
 }
 
 footer {
