@@ -103,7 +103,7 @@ h1 {
 
 img {
   width: 50% !important;
-  margin: auto !important;
+  margin: 5% 25% 5% 25% !important;
 }
 nav {
   clear: both;
