@@ -93,12 +93,11 @@ footer {
   }
 
 
-
-@media screen only (max-width: 960px){
+@media only screen and (max-device-width: 667px){
 header {
   font-size: 1em !important;
   margin: 5% 25% 5% 25% !important;
-  width: 50% !important;
+  width: 35% !important;
   text-align: center !important;
  }
 
