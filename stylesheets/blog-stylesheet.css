@@ -71,3 +71,8 @@ img {
   padding: 2%;
 
 }
+
+@media only screen and (orientation: portrait){
+header {
+  height: 20%;
+ }
