@@ -102,8 +102,9 @@ h1 {
 }
 
 img {
+  clear: both;
   width: 40%;
-  margin: auto;
+  margin-bottom: 20%;
 }
 nav {
   clear: both;
@@ -112,9 +113,9 @@ nav {
   float: none;
 }
 li {
-  font-size: 2em;
+  font-size: 1.5em;
   display: block;
-  padding: 8% 0 8% 0;
+  padding: 12% 0 12% 0;
 }
 
 footer {
