@@ -102,8 +102,14 @@ h1 {
 }
 
 img {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  right: 30%;
+  width: 40%;
+ /* clear: both;
   width: 40% !important;
-  margin: 15s% 30% !important;
+  margin: 15% 30% !important;*/
 }
 nav {
   clear: both;
