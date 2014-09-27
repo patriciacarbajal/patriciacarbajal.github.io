@@ -95,9 +95,9 @@ footer {
 
 @media only screen and (max-device-width: 667px){
 header {
-  font-size: 1em !important;
+  font-size: 1.5em !important;
   margin: 5% 25% 5% 25% !important;
-  width: 30% !important;
+  width: 50% !important;
   text-align: center !important;
  }
 
@@ -107,7 +107,7 @@ h1 {
 
 
 header img {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 nav {
