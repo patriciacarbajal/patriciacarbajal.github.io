@@ -77,13 +77,3 @@ footer {
    right: 0;
   }
 
-@media only screen and (orientation: portrait){
-header {
-  height: 20%;
-  width: 100%;
-  background-color: red;
- }
- #title {
-  margin: 35% 20% 10% 20%;
- }
-}
