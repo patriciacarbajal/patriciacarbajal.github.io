@@ -94,7 +94,7 @@ footer {
 
 
 
-/*@media screen only (max-width: 960px){
+@media screen only (max-width: 960px){
 header {
   font-size: 1em !important;
   margin: 5% 25% 5% 25% !important;
@@ -104,14 +104,14 @@ header {
 
 h1 {
   margin-top: 50% !important;
-}*/
+}
 
 
-/*header img {
+header img {
   width: 80%;
   margin: auto;
-}*/
-/*nav {
+}
+nav {
   clear: both;
   width: 80%;
   margin: auto;
@@ -120,7 +120,7 @@ h1 {
 li {
   display: block;
   padding: 2% 0 2% 0;
-}*/
+}
 }
 
 
