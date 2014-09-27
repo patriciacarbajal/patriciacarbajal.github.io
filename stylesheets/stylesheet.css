@@ -4,10 +4,6 @@ font-family: 'Montserrat Alternates', sans-serif;
 color: #black;
 }
 
-#wrapper {
-  min-height: 100%;
-  position: relative;
-}
 
 img {
   position: absolute;
