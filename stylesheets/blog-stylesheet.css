@@ -77,3 +77,8 @@ footer {
    right: 0;
   }
 
+  @media only screen and (orientation: portrait){
+header {
+  height: 20%;
+ }
+}
