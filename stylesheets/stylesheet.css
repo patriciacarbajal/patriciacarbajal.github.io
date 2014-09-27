@@ -25,7 +25,7 @@ header {
   color: red;
   margin: auto;
 }
-#name  {
+h1  {
 font-size: 2.5em !important;
 margin-top: 25% !important;
 text-align: center !important;
@@ -92,17 +92,9 @@ footer {
    text-align: right;
   }
 
-section h1 {
-  font-size: 2em;
-  text-align: center;
-  margin-top: 10%;
-}
 
 
-
-
-
-@media screen only (max-width: 960px){
+/*@media screen only (max-width: 960px){
 header {
   font-size: 1em !important;
   margin: 5% 25% 5% 25% !important;
@@ -110,9 +102,9 @@ header {
   text-align: center !important;
  }
 
-#name {
+h1 {
   margin-top: 50% !important;
-}
+}*/
 
 
 /*header img {
