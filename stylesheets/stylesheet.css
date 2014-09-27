@@ -121,6 +121,13 @@ li {
   display: block;
   padding: 25% 0 25% 0;
 }
+#icons {
+width: 40% !important;
+font-size: 2em;
+position: absolute !important;
+top: 2% !important;
+right: 2% !important;
+}
 
 }
 
