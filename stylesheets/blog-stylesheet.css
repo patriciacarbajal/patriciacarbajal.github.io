@@ -79,9 +79,11 @@ footer {
 
 @media only screen and (orientation: portrait){
 header {
-  max-height: 20%;
+  height: 20%;
+  width: 100%;
+  background-color: red;
  }
  #title {
-  margin-top: 30%;
+  margin: 35% 20% 10% 20%;
  }
 }
