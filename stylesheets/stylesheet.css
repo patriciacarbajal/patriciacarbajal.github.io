@@ -88,8 +88,8 @@ footer {
    text-align: right;
   }
 
-
-@media only screen and (max-device-width: 667px) and (orientation: portrait){
+/*and (max-device-width: 667px)*/
+@media only screen and (orientation: portrait){
 header {
   font-size: 2em !important;
   margin: 5% 25% 5% 25% !important;
