@@ -120,6 +120,13 @@ li {
   display: block;
   padding: 2% 0 2% 0;
 }
+
+footer {
+   clear: both;
+   text-align: right;
+   position: absolute;
+   bottom: 2%;
+  }
 }
 
 
