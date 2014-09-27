@@ -108,11 +108,11 @@ header {
   margin: 5% 25% 5% 25% !important;
   width: 50% !important;
   text-align: center !important;
-}
+ }
 
-/*#name {*/
- /* margin-top: 30% !important;
-}*/
+#name {
+  margin-top: 35% !important;
+}
 
 
 /*header img {
