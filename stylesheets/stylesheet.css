@@ -98,7 +98,7 @@ header {
  }
 
 h1 {
-  margin-top: 70% !important;
+  margin-top: 80% !important;
 }
 
 img {
@@ -107,9 +107,6 @@ img {
   left: 30%;
   right: 30%;
   width: 40%;
- /* clear: both;
-  width: 40% !important;
-  margin: 15% 30% !important;*/
 }
 nav {
   clear: both;
@@ -120,7 +117,7 @@ nav {
 li {
   font-size: 1.25em;
   display: block;
-  padding: 22% 0 22% 0;
+  padding: 25% 0 25% 0;
 }
 
 footer {
