@@ -121,9 +121,10 @@ li {
 }
 
 footer {
-/*   text-align: right;
-*/   position: absolute;
-   bottom: 2%;
+  clear: both;
+  text-align: right;
+  margin-bottom: 2%;
+
   }
 }
 
