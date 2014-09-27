@@ -69,10 +69,16 @@ img {
   width: 70%;
   border: 2px dotted red;
   padding: 2%;
-
 }
+
+footer {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+  }
 
 @media only screen and (orientation: portrait){
 header {
   height: 20%;
  }
+}
