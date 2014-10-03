@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <title>Technical Blog</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a id="nav" href="../index.html">Home</a>
+      <a id="nav" href="../contact.html">Contact me</a>
+      <a id="nav" href="../blogposts.html">Archive</a>
+      <h3 id="search"><!-- insert search box here --></h3>
+    </div>
+
+<header>
+  <h1>Patricia Carbajal</h1>
+  <h3>Dev Bootcamp blog</h3>
+</header>
+
+    <h1 id="title">Technical Blog</h1>
+
+
+    <h2 class="post-title">Blocks, Procs and Lambdas</h2>
+      <h4>October 2, 2014</h4>
+      <div id="post-text">
+
+<p>Blocks, Procs and lambdas are all examples of closures. A closure is basically a function or a method that can be passed around like an object.</p>
+<p>It keeps track of the variables that were in scope when it was created, and these variables can be accessed later even when out of scope.  Closures are a great way to keep code clean and DRY, as they can be reused without typing blocks again and again.</p>
+
+<p><b>Blocks</b></p>
+<p>A Ruby block is just a bit of code that can be executed, like an anonymous function.</p>
+<p>By convention, block syntax uses either curly braces ({}) if spanning only one line, or <i>do..end</i> if spanning multiple lines.</p>
+
+<p>Blocks can also be used in conjunction with iterator methods like .each and .times to execute an instruction for each element in a collection (like a hash or array).</p>
+
+<p>Below are some examples of blocks.  The first example shows how a block is used in a yield statement.</p>
+
+<div id="example">
+
+<p> def example(name)</p>
+  <p id="indent"> yield(name)</p>
+<p>end</p><br>
+
+<p>example("Patricia") { |name| puts "Hey, #{name}, I'm a block!" }</p><br>
+
+<p>Output:</p>
+
+<p> Hey, Patricia, I'm block!</p>
+
+</div>
+
+<br>
+<p>The following two examples show how a block is used as an argument in conjunction with an iterator method.  The first uses the curly brace syntax, and the second uses <i>do..end</i>.</p>
+<div id="example">
+
+<p> 5.times { |x| puts "I'm a block! Round #{x + 1}" }</p><br>
+
+<p>Output:</p>
+
+<p>I'm a block! Round 1</p>
+
+<p>I'm a block! Round 2</p>
+
+<p>I'm a block! Round 3</p>
+
+<p>I'm a block! Round 4</p>
+
+<p>I'm a block! Round 5</p>
+
+</div>
+
+
+<p><b>or</b></p>
+
+<div id="example">
+ <p>5.times  do |x| </p>
+
+  <p id="indent">puts "I'm a block! Round #{x + 1}"</p>
+
+<p>end</p><br>
+
+<p>Output:</p>
+<p>   I'm a block! Round 1</p>
+
+<p>   I'm a block! Round 2</p>
+
+<p>   I'm a block! Round 3</p>
+
+<p>   I'm a block! Round 4</p>
+
+<p>   I'm a block! Round 5</p>
+
+</div>
+
+<p><b>Procs</b></p>
+
+<p>Procs, short for Procedures, are basically saved blocks.  They can be saved to a variable.</p>
+<p>Why might you want to save a block as a Proc?  A Proc is a true object, and unlike blocks, have all of the same abilities as objects.</p>
+<p>Also, Procs, unlike blocks, can be called multiple times without being typed out every time.  This can keep your code DRY and save many lines of code.</p>
+<p>More than one Proc can be passed into a method, which cannot be done with blocks.</p>
+<p>Here is an example of a Proc in action.  Notice how we use the & symbol to convert the Proc into a block when we pass it into the collect! method.  It can also be called using .call.</p>
+
+<div id="example">
+
+<p>cube = Proc.new { |x| p x ** 3 }</p>
+
+<p>[1, 2, 3].collect!(&cube)</p>
+
+<p>cube.call(12)</p><br>
+
+<p>Output:</p>
+<p>1</p>
+<p>8</p>
+<p>27</p>
+<p>1728</p>
+
+</div>
+
+
+<p><b>Lambdas</b></p>
+
+<p>A lambda is very similar to a Proc.  However, lambdas are strict about the number of arguments passed in, and will throw an argument error, while a Proc will simply assign <i>nil</i> to missing arguments.</p>
+<p>As objects, lambdas can also have methods and can be assigned to variables.</p>
+
+<p>Unlike a Proc, which returns the value from within the Proc, the lambda will pass control back to the calling method and return.</p>
+
+<div id="example">
+
+<p>def lambda_example</p>
+ <p id="indent">lambda { return "We just returned from the block!" }.call</p>
+ <p id="indent">return "We just returned from the calling method!"</p>
+<p>end</p>
+
+<p>puts lambda_example</p><br>
+<p>Output:</p>
+<p>We just returned from the calling method!</p>
+
+</div>
+
+</body>
+
+</html>
+
