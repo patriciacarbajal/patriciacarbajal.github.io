@@ -62,11 +62,11 @@ a:hover {
 color: black;
 }
 
-
 footer {
-   position: absolute !important;
+   position: relative !important;
    bottom: 0 !important;
    right: 0 !important;
+   text-align: right;
   }
 
   @media only screen and (orientation: portrait){
