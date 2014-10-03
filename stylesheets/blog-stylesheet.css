@@ -48,6 +48,13 @@ img {
   margin: 0 25% 0 25%;
 }
 
+#example {
+  background-color: grey;
+  padding: 2%;
+}
+#indent {
+  text-indent: 20px
+}
 
 #title {
   text-align: center;
