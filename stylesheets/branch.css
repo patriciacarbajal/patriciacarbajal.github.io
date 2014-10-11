@@ -39,6 +39,18 @@
   text-align: center;
 }
 
+a:hover {
+  color: red;
+}
+
+#blog h3 {
+  text-align: center;
+}
+
+#blog ul {
+  list-style-type: none;
+}
+
 #contact {
   text-align: center;
   font-size: 1.5em;
