@@ -68,6 +68,9 @@ img {
   width: 60%;
 }
 
+#red li a {
+  color: red;
+}
 
 #post-text {
   display: block;
