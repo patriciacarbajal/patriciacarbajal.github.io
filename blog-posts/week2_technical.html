@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <title>CSS Positions</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a id="nav" href="../index.html">Home</a>
+        <a id="nav" href="../contact.html">Contact me</a>
+        <a id="nav" href="../blogposts.html">Archive</a>
+        <h3 id="search">
+            <!-- insert search box here -->
+        </h3>
+    </div>
+
+    <header>
+        <h1>Patricia Carbajal</h1>
+        <h3>Dev Bootcamp blog</h3>
+    </header>
+
+    <h1 id="title">Technical Blog</h1>
+
+    <h2 class="post-title">Relative, Absolute, and Fixed Positioning - What's the difference?</h2>
+    <h4>September 6, 2014</h4>
+    <div id="post-text">
+        <p>Relative, absolute, and fixed positioning can be a source of confusion when learning CSS. Let's see if we can clear it up.</p>
+        <p>First of all, you should know that all elements have the position "static" by default. You won't need to use this unless you are trying to remove positioning for some reason. Let's not worry about it for now.</p>
+        <p><b>Relative positioning</b> means that the element is positioned relative to itself. In order for this to have an effect, you must set another positioning attribute (such as top, right, bottom and left). For example,
+            <br>
+            <br>position: relative;
+            <br>left: 20px;
+            <br>
+            <br>would shift the element 20px to the right from where it would normally be on the page.</p>
+        <p>When the element is shifted, it's original space is preserved in the flow of the page so other elements won't fill it's spot.</p>
+
+        <p><b>Absolute positioning</b>, on the other hand, lets you position an element anywhere on the page by using the top, right, bottom, and left positioning attributes.
+            <br>
+            <br>Position: absolute;
+            <br>top:0px;
+            <br>right:0px;
+            <br>
+            <br>will place the element at the top right corner of the page.</p>
+
+        <p>However, if an element is within a parent element that is set to position: relative;, absolute positioning will set the child element relative to the parent element.</p>
+
+        <p>Remember that unlike relative positioning, the element's space will not be preserved in the flow of the page when shifted. Other elements will fall into it's original place.</p>
+
+        <p><b>Fixed positioning</b> sets an element's location relative to the browser window, and keeps it there. When the page is scrolled, the element will remain fixed in the same position as the rest of the page shifts as usual.</p>
+
+        <p>Hopefully you now better understand the difference between absolute, relative and fixed positioning!</p>
+    </div>
+
+</body>
+
+</html>
