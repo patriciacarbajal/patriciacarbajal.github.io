@@ -91,47 +91,46 @@
 
 // 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
 
-addItems("apple", 4);
-addItems("pear", 3);
-addItems("chicken", 2);
-displayList();
-totalQuantity("pear")
-addItems("pear", 8)
-totalQuantity("pear")
-removeItems("chicken")
-totalQuantity("chicken")
-displayList()
+// addItems("apple", 4);
+// addItems("pear", 3);
+// addItems("chicken", 2);
+// displayList();
+// totalQuantity("pear")
+// addItems("pear", 8)
+// totalQuantity("pear")
+// removeItems("chicken")
+// totalQuantity("chicken")
+// displayList()
 
 
-function assert(test, message, test_number) {
-  if (!test) {
-    console.log(test_number + "false");
-    throw "ERROR: " + message;
-  }
-  console.log(test_number + "true");
-  return true;
-}
+// function assert(test, message, test_number) {
+//   if (!test) {
+//     console.log(test_number + "false");
+//     throw "ERROR: " + message;
+//   }
+//   console.log(test_number + "true");
+//   return true;
+// }
 
-assert(
-  (contains instanceof Function),
-  "The value of average should be a Function.\n",
-  "1. "
-)
+// assert(
+//   (contains instanceof Function),
+//   "The value of average should be a Function.\n",
+//   "1. "
+// )
 
-assert(
-  contains("pear") === true,
-  "contains should return true if an item is on the list.\n",
-  "2. "
-)
+// assert(
+//   contains("pear") === true,
+//   "contains should return true if an item is on the list.\n",
+//   "2. "
+// )
 
-assert(
-  (grocerylist instanceof Object),
-  "The value of grocerylist should be an Object.\n",
-  "3. "
-)
-
-
+// assert(
+//   (grocerylist instanceof Object),
+//   "The value of grocerylist should be an Object.\n",
+//   "3. "
+// )
 
 
 
-// 5. Reflection 
+
+
