@@ -1,16 +1,17 @@
 
-body {
-font-family: 'Montserrat Alternates', sans-serif;
-color: #black;
+* {
+margin:0;
+padding:0;
 }
 
+body {
+font-family: 'Permanent Marker';
+}
 
-img {
-  position: absolute;
-  top: 5%;
-  left: 40%;
-  right: 40%;
-  width: 20%;
+#container {
+  width: 100%;
+  height: 100%;
+  
 }
 
 header {
@@ -19,6 +20,8 @@ header {
   width: 50% !important;
   margin: 5% 25% 0% 25% !important;
   padding: 0 1% 0 1% !important;
+  position: absolute;
+  top: 70%;
 }
 
 #indexheader p {
@@ -26,66 +29,108 @@ header {
   margin: auto;
 }
 
-h1  {
-font-size: 2.5em !important;
-margin-top: 25% !important;
-text-align: center !important;
-}
+
 
 #white {
+  position: relative;
+  top: 20%;
+  right: 2%;
   color: white;
+  font-size: 8em !important;
+  text-align: right;
 }
 
 #black {
-margin-left: 1%;
+  position: relative;
+  top: 20%;
+  left: 2%;
+  font-size: 8em !important;
+
 }
 
-#nav {
-  font-size: 1.75em;
-  width: 50%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
+.block {
+
+ display: inline-block;
+ height: 600px;
+ width: 49.5%;
 }
+
+/*.left {
+  margin-left: 9%;
+  border-left: 1px solid black;
+}
+
+.right {
+  border-right: 1px solid black;
+}*/
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+.circle {
+  width: 84%;
+  height: 90%;
+  border-radius: 100%;
+  margin-left: 8%;
+  margin-top: 4%
+}
+
+.nav {
+  display: block;
+  margin: 0 auto;
+  padding-top: 30%;
+  color: red;
+}
+
+#contact {
+  width: 70%;
+}
+
+#about {
+  width: 50%;
+}
+
+#blog {
+  width: 40%;
+}
+
+#projects {
+  width: 75%;
+}
+
 
 a {
-  color: white;
+  color: red;
+  font-size: 6em;
+  text-decoration: none;
+ 
+ 
 }
 
 a:hover {
   color: red;
 }
 
-ul {
- list-style-type: none;
- height: 100%;
-}
-
-li {
-  display: block;
-  padding: 5% 0 5% 10%;
-  margin: 0px;
-  text-align: left;
-}
 
 #icons {
-width: 30% !important;
-position: absolute !important;
-top: 2% !important;
-right: 2% !important;
+float: both;
+text-align: center;
+background-color: red;
 }
 
 .fa {
-  text-align: center;
   padding: 4%;
-  float: right;
   color: black;
 }
 
 footer {
-   position: absolute;
+  float: both;
+   position: relative;
    bottom: 0;
    right: 0;
   }
