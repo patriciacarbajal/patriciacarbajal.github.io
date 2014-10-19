@@ -15,19 +15,16 @@ font-family: 'Montserrat Alternates', serif;
 }
 
  header {
+  color: red;
   font-size: 3vw !important;
   text-align: center !important;
   width: 50% !important;
   margin: 5% 25% 0% 25% !important;
   padding: 0 1% 0 1% !important;
   position: absolute; !important;
-  top: 40% !important;
+  top: 45% !important;
 }
 
-#indexheader p {
-  color: red;
-  margin: auto;
-}
 
 h1 {
   font-size: 10vw;
