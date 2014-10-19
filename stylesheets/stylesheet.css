@@ -147,13 +147,14 @@ footer {
 /*and (max-device-width: 667px)*/
 @media only screen and (orientation: portrait){
 header {
-  top: 20% !important;
+  top: 40% !important;
  }
 
  .upper {
  display: inline-block;
  width: 49.5%;
  padding-bottom: 40%;
+ padding-top: 20%;
 }
 
 }
