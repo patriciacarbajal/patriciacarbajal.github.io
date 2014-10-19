@@ -54,31 +54,53 @@
 #contact {
   text-align: center;
   font-size: 1.5em;
+  padding-bottom: 10%;
 }
 
 #projects {
   text-align: center;
   font-size: 1.5em;
+  padding-bottom: 10%;
 }
 
 #about {
   text-align: center;
-  font-size: 1.5em
+  font-size: 1.5em;
+  padding-bottom: 10%;
 }
 
 a:hover {
   color: red;
 }
 
-.fa {
-color: black;
+
+.fa:hover {
+  color: white;
+}
+
+
+#icons {
+float: both;
+background-color: red;
+width: 100%;
+}
+
+#icons p {
+  float: both;
+  width: 15%;
+  display: inline-block;
+  padding: 2% 4.5% 0% 4.5%;
+}
+
+p a{
+  color: black;
+
 }
 
 footer {
-   position: relative !important;
-   bottom: 0 !important;
-   right: 0 !important;
-   text-align: right;
+  text-align: center;
+  padding: 1%;
+  font: 2wv;
   }
 
   @media only screen and (orientation: portrait){
