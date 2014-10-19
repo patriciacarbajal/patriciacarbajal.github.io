@@ -51,7 +51,7 @@ h1 {
 
 .lower {
   display: inline-block;
-  width: 24%;
+  width: 24.35%;
   padding-bottom: 2%;
 
 }
@@ -140,7 +140,7 @@ footer {
   font: 2wv;
   }
 
-/*and (max-device-width: 667px)*/
+
 @media only screen and (orientation: portrait){
 header {
   top: 60% !important;
@@ -151,6 +151,10 @@ header {
  width: 49.5%;
  padding-bottom: 50%;
  padding-top: 50%;
+}
+
+.lower {
+  width: 23.65%;
 }
 
 #white {
