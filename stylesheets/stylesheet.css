@@ -32,18 +32,18 @@ header {
 
 
 #white {
-  position: relative;
-  top: 2%;
-  right: 2%;
+  position: relative !important;
+  top: 2% !important;
+  right: 2% !important;
   color: white;
-  font-size: 8em ;
+  font-size: 8em !important;
   text-align: right;
 }
 
 #black {
-  position: relative;
-  top: 5%;
-  left: 1%;
+  position: relative !important;
+  top: 5% !important;
+  left: 1% !important;
   font-size: 8em ;
 
 }
