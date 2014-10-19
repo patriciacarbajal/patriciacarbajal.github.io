@@ -5,7 +5,7 @@ padding:0;
 }
 
 body {
-font-family: 'Permanent Marker';
+font-family: 'Montserrat Alternates', serif;
 }
 
 #container {
@@ -48,21 +48,17 @@ header {
 
 }
 
-.block {
-
+.upper {
  display: inline-block;
  height: 600px;
  width: 49.5%;
 }
 
-/*.left {
-  margin-left: 9%;
-  border-left: 1px solid black;
+.lower {
+  display: inline-block;
+  width: 24.3%;
+  height: 300px;
 }
-
-.right {
-  border-right: 1px solid black;
-}*/
 
 .black {
   background-color: black;
@@ -106,7 +102,7 @@ header {
 
 a {
   color: red;
-  font-size: 6em;
+  font-size: 3em;
   text-decoration: none;
  
  
