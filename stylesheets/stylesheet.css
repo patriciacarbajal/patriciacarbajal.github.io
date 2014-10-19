@@ -121,21 +121,25 @@ a {
 
 #icons {
 float: both;
-text-align: center;
 background-color: red;
-font-size: 1.25em;
+height: 25%;
 }
 
 .fa {
-  padding: 8.5%;
   color: black;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 4%;
+  padding-bottom: 0%;
 }
 
 footer {
-  float: both;
+  text-align: center;
+  padding: 1%;
+ /* float: both;
    position: relative;
    bottom: 0;
-   right: 0;
+   right: 0;*/
   }
 
 /*and (max-device-width: 667px)*/
