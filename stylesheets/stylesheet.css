@@ -34,17 +34,13 @@ h1 {
 }
 
 #white {
-  position: relative !important;
-  top: 2% !important;
-  right: 2% !important;
+  padding-right: 2% !important;
   color: white;
   text-align: right !important;
 }
 
 #black {
-  position: relative !important;
-  top: 5% !important;
-  left: 1% !important;
+ padding-left: 2%;
 }
 
 .upper {
@@ -155,6 +151,14 @@ header {
  width: 49.5%;
  padding-bottom: 50%;
  padding-top: 50%;
+}
+
+#white {
+  padding-top: 10%;
+}
+
+#black {
+ padding-top: 10%;
 }
 
 }
