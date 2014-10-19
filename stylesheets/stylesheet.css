@@ -43,7 +43,7 @@ header {
 #black {
   position: relative;
   top: 20%;
-  left: 2%;
+  left: 1%;
   font-size: 8em !important;
 
 }
@@ -58,6 +58,13 @@ header {
   display: inline-block;
   width: 24.3%;
   height: 300px;
+}
+
+.lower .black:hover {
+  background-color: white;
+}
+.lower .white:hover {
+  background-color: black;
 }
 
 .black {
@@ -83,6 +90,7 @@ header {
   color: red;
 }
 
+
 #contact {
   width: 70%;
 }
@@ -104,12 +112,10 @@ a {
   color: red;
   font-size: 3em;
   text-decoration: none;
- 
- 
 }
 
-a:hover {
-  color: red;
+.fa:hover {
+  color: white;
 }
 
 
@@ -117,10 +123,11 @@ a:hover {
 float: both;
 text-align: center;
 background-color: red;
+font-size: 1.25em;
 }
 
 .fa {
-  padding: 4%;
+  padding: 8.5%;
   color: black;
 }
 
