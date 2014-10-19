@@ -82,21 +82,23 @@ h1 {
 .nav {
   display: block;
   margin: 0 auto;
-  padding-top: 35%;
-  color: red;
+/*  padding-top: 35%;
+*/  color: red;
+  padding: 35% 5% 0% 5%;
 }
 
 
-.circle #contact {
-  width: 70% !important;
+#contact {
+ width: 80% !important;
 }
 
 #about {
-  width: 50% !important;
+  
+  width: 60% !important;
 }
 
 #blog {
-  width: 40% !important;
+  width: 45% !important;
 }
 
 #projects {
