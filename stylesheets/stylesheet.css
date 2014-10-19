@@ -149,7 +149,7 @@ header {
  display: inline-block;
  width: 49.5%;
  padding-bottom: 50%;
- padding-top: 40%;
+ padding-top: 30%;
 }
 
 .lower {
@@ -162,6 +162,10 @@ header {
 
 #black {
  padding-top: 10%;
+}
+
+#icons {
+height: 35%;
 }
 
 }
