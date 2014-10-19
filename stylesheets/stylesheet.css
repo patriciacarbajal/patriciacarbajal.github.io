@@ -142,7 +142,7 @@ footer {
 
 @media only screen and (orientation: portrait){
 header {
-  top: 60% !important;
+  top: 45% !important;
  }
 
  .upper {
@@ -165,7 +165,9 @@ header {
 }
 
 #icons {
-height: 35%;
+
+padding-top: 5%;
+padding-bottom: 5%;
 }
 
 }
