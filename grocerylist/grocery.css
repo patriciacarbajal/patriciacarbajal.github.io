@@ -19,9 +19,13 @@ img {
 #wrapper {
 	background-color: #00FF99;
 	margin: 0% 20% 0% 20%;
-/*	padding-top: 2%;
-*/	padding-bottom: 2%;
+	margin-top: 3%;
+	padding-bottom: 2%;
 	border-radius: 100%;
+}
+
+form {
+	padding: 10%;
 }
 
 p {
