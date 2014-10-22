@@ -104,10 +104,10 @@ footer {
   }
 
   @media only screen and (orientation: portrait){
-    #title {
-      padding-top: 20%;
-    }
-/*header {
-
- }*/
+header {
+  height: 20% !important;
+ }
+ #title {
+  padding-top: 20%;
+ }
 }
