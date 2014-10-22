@@ -80,8 +80,6 @@ a:hover {
 
 
 #icons {
-position: absolute;
-bottom: 0;
 float: both;
 background-color: red;
 width: 100%;
@@ -111,5 +109,10 @@ header {
  }
  #title {
   padding-top: 20%;
+ }
+
+ #icons {
+  position: absolute;
+  bottom: 0;
  }
 }
