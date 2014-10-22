@@ -43,19 +43,19 @@ p {
 	}
 
 	img {
-		width: 40%;
+		width: 50%;
 		margin-bottom: 5%;
 	}
 
 	h1 {
-		font-size: 8vw;
+		font-size: 9vw;
 	}
 
 	form {
-		font-size: 2.5vw;
+		font-size: 3vw;
 	}
 
 	p {
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 }
