@@ -38,12 +38,13 @@ p {
 @media only screen and (orientation: portrait){
 
 	#wrapper {
-		width: 70%;
+		width: 80%;
 		margin: 0 auto;
 	}
 
 	img {
 		width: 40%;
+		margin-bottom: 5%;
 	}
 
 	h1 {
