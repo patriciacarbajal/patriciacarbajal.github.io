@@ -8,7 +8,7 @@ body {
 h1 {
 	background-color: #99FFCC;
 	font-family: 'Pacifico', cursive;
-	font-size: 3em;
+	font-size: 6vw;
 }
 
 img {
@@ -19,17 +19,19 @@ img {
 #wrapper {
 	background-color: #00FF99;
 	margin: 0% 20% 0% 20%;
-	margin-top: 3%;
+	margin-top: 5%;
 	padding-bottom: 2%;
 	border-radius: 100%;
 }
 
 form {
 	padding: 10%;
+	font-size: 1.75vw;
 }
 
 p {
 	font-weight: bold;
 	padding-top: 2%;
+	font-size: 2vw;
 }
 
