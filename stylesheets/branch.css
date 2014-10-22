@@ -80,6 +80,8 @@ a:hover {
 
 
 #icons {
+position: absolute;
+bottom: 0;
 float: both;
 background-color: red;
 width: 100%;
@@ -98,8 +100,6 @@ p a{
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   text-align: center;
   padding: 1%;
   font: 2wv;
