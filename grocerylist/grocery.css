@@ -36,6 +36,16 @@ p {
 }
 
 @media only screen and (orientation: portrait){
+
+	#wrapper {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	img {
+		width: 40%;
+	}
+
 	h1 {
 		font-size: 8vw;
 	}
