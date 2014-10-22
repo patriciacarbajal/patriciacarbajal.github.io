@@ -38,6 +38,7 @@ p {
 @media only screen and (orientation: portrait){
 
 	input {
+		margin-top: 1%;
 		font-size: 3vw;
 	}
 
@@ -67,6 +68,7 @@ p {
 @media only screen and (orientation: portrait){
 
 	input {
+		margin-top: 1%;
 		font-size: 3vw;
 	}
 	img {
