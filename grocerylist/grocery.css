@@ -38,8 +38,8 @@ p {
 @media only screen and (orientation: portrait){
 
 	#wrapper {
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-left: 20%;
+		padding-right: 20%;
 	}
 
 	img {
