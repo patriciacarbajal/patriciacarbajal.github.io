@@ -85,6 +85,12 @@ background-color: red;
 width: 100%;
 }
 
+#blog-icons {
+float: both;
+background-color: red;
+width: 100%;
+}
+
 #icons p {
   float: both;
   width: 15%;
@@ -92,12 +98,7 @@ width: 100%;
   padding: 2% 4.5% 0% 4.5%;
 }
 
-#blog-icons p {
-  float: both;
-  width: 15%;
-  display: inline-block;
-  padding: 2% 4.5% 0% 4.5%;
-}
+
 
 p a{
   color: black;
