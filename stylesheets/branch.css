@@ -111,7 +111,12 @@ header {
   padding-top: 20%;
  }
 
- #icons {
+  #icons {
+  position: absolute;
+  bottom: 0;
+ }
+
+ #blog-icons {
   position: relative;
   bottom: 0;
  }
