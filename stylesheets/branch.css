@@ -92,6 +92,13 @@ width: 100%;
   padding: 2% 4.5% 0% 4.5%;
 }
 
+#blog-icons p {
+  float: both;
+  width: 15%;
+  display: inline-block;
+  padding: 2% 4.5% 0% 4.5%;
+}
+
 p a{
   color: black;
 
