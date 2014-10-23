@@ -112,7 +112,7 @@ header {
  }
 
  #icons {
-  position: absolute;
+  position: relative;
   bottom: 0;
  }
 }
