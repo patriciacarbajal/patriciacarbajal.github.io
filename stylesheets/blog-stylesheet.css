@@ -68,10 +68,10 @@ img {
   width: 60%;
 }
 
-#red li a {
+/*#red li a {
   color: red;
 }
-
+*/
 #post-text {
   display: block;
   text-align: left;
@@ -82,10 +82,34 @@ img {
   padding: 2%;
 }
 
+.fa:hover {
+  color: white;
+}
+
+
+#icons {
+float: both;
+background-color: red;
+height: 25%;
+width: 100%;
+}
+
+#icons p {
+  float: both;
+  width: 15%;
+  display: inline-block;
+  padding: 2% 4.5% 2% 4.5%;
+}
+
+p a{
+  color: black;
+
+}
+
 footer {
-   position: absolute;
-   bottom: 0;
-   right: 0;
+  text-align: center;
+  padding: 1%;
+  font: 2wv;
   }
 
   @media only screen and (orientation: portrait){
