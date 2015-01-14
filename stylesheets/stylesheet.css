@@ -20,13 +20,13 @@ font-family: 'Montserrat Alternates', serif;
 
  header {
   color: red;
-  font-size: 3vw !important;
-  text-align: center !important;
+  font-size: 1.5vw !important;
+  text-align: right !important;
   width: 50% !important;
-  margin: 5% 25% 0% 25% !important;
+  margin: 0 15% 0% 25% !important;
   padding: 0 1% 0 1% !important;
   position: absolute; !important;
-  top: 45% !important;
+  top: 40% !important;
 }
 
 
@@ -146,7 +146,7 @@ footer {
 
 @media only screen and (orientation: portrait){
 header {
-  top: 45% !important;
+  top: 35% !important;
  }
 
  .upper {
