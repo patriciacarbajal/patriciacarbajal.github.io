@@ -14,6 +14,10 @@ font-family: 'Montserrat Alternates', serif;
   
 }
 
+.description {
+  margin: 0 25% 5% 25%;
+}
+
  header {
   color: red;
   font-size: 3vw !important;
