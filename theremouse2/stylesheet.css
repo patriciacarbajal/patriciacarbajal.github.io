@@ -1,0 +1,23 @@
+#header{
+font-family: 'Inconsolata';
+margin-left: -29%;
+font-size: 4em;
+}
+
+.x, .y {
+  font-family: 'Inconsolata';
+  text-align: center;
+}
+
+.line {
+  display: inline-block;
+  height: 100%;
+  width: 14%;
+}
+
+
+
+.line4 {
+  position: absolute;
+  top: 25%;
+}
