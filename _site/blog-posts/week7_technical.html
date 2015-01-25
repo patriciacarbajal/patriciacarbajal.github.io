@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <title>Technical Blog</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a id="nav" href="../index.html">Home</a>
+      <a id="nav" href="../contact.html">Contact me</a>
+      <a id="nav" href="../blogposts.html">Archive</a>
+      <h3 id="search"><!-- insert search box here --></h3>
+    </div>
+
+<header>
+  <h1>Patricia Carbajal</h1>
+  <h3>Dev Bootcamp blog</h3>
+</header>
+
+    <h1 id="title">Technical Blog</h1>
+
+
+    <h2 class="post-title">Preventing SQL Injections</h2>
+      <h4>October 9, 2014</h4>
+      <div id="post-text">
+
+
+
+<p>SQL is ubiquitous in our world.  It is used to manage databases of information by all types of businesses and institutions and everything in between.</p>
+
+<p>Think of an application in which you enter a username and password and get information in return.  This is an example of SQL in action.  </p>
+
+<p>However, this type of application requires dynamic SQL statements in order to take in user input.  This input is then built into the statement.    Long ago, unfortunately,some very clever hackers figured out the vulnerabilities in this situation - that these input fields could be manipulated to malignantly access or alter databases.  This is called SQL injection, and it is a huge threat to SQL database security if the proper precautions are not taken.</p><br><br>
+
+        <img src="../bobbytables.jpg"><br><br><br>
+
+
+<p>Take this situation, for example:</p>
+<p>If a user passes in something like <b>0 or 1 = 1</b> as their user name, and we pass that value into user_name in our SQL statement as so...</p><br>
+
+<p><b>stm = db.execute("SELECT * FROM users WHERE name = " + user_name + ";"")</b></p><br>
+
+
+<p>This is what SQL sees:</p><br>
+
+<p><b>SELECT * FROM users WHERE name = 0 OR 1=1;</b></p><br>
+
+
+<p>The user has tricked SQL!  Since 1=1 is always true, the server will return all of the rows from the table.  Tsk tsk, user.</p>
+
+<p>This is one of the many, many ways malicious strings can be used to access SQL database information.</p>
+
+
+
+
+
+<p>Not to fear.  We can make our dynamic SQL less vulnerable to injection attack by using parameter binding!</p><br>
+
+<p><b>name = user_name</b></p>
+<p><b>stm = db.prepare("SELECT * FROM users WHERE name = ?;")</b></p>
+<p><b>stm.bind_params name</b></p><br>
+
+<p>Here's what you do:</p>
+<ul>
+<li>Create a variable to hold the user input so that it does not go directly into the SQL statement.</li>
+<li>Replace .execute with .prepare.</li>
+<li>All input dynamically passed in to the statement, such as user_name, will be replaced by a question mark (?).</li>
+<li>Using .bind_params as shown, pass in the input variable.</li>
+</ul><br>
+
+<p>The question mark will be replaced with a sanitized version of the input variable.  We are safe!</p>
+
+
+
+
+</div>
+
+</body>
+
+</html>
+

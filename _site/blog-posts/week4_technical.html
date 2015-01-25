@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <title>Technical Blog</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a id="nav" href="../index.html">Home</a>
+      <a id="nav" href="../contact.html">Contact me</a>
+      <a id="nav" href="../blogposts.html">Archive</a>
+      <h3 id="search"><!-- insert search box here --></h3>
+    </div>
+
+<header>
+  <h1>Patricia Carbajal</h1>
+  <h3>Dev Bootcamp blog</h3>
+</header>
+
+    <h1 id="title">Technical Blog</h1>
+
+
+    <h2 class="post-title">Enumerable Methods - enumerable#group_by</h2>
+      <h4>September 16, 2014</h4>
+      <div id="post-text">
+
+<p>Today I'm going to discuss a useful Ruby method - <b>Enumerable#group_by</b>.</p>
+<p>This method takes in a sequence of enumerable values, puts them through a block, and produces a hash.  The keys of the new hash are the evaluated results from the block.  The values of the hash are arrays of the elements in the original sequence that correspond to the key.  If no block is passed, the method will return an enumerator.</p>
+<p>This must all sound very confusing. Allow me to demonstrate with an example...</p>
+<p>array = [1, 2, 3, 4, 5, 6]</p>
+<p>array.group_by { |x| x % 2}</p>
+<br>
+<p>The result will be:</p>
+<p>#=> {1=>[1, 3, 5], 0=>[2, 4, 6]}</p>
+<br><br>
+<p>In the above example, array is the sequence of enumerable values (objects).  Each object of the array can be passed through the method one by one.</p>
+<p>In the block, x represents each object being passed through the method.  Each one of them is evaluated through the expression x % 2.  Each unique result of this evaluation now becomes a key in the resulting hash.  </p>
+  <p>The value for each key is an array with the elements for which the result is true.  In this example, 1 % 2, 3 % 2  and 5 %2  each result in 1, and 2 % 2, 4 % 2 and 6 % 2 each result in 0.</p>
+<br> <br>
+<p>And there you have it!</p>
+
+</div>
+
+</body>
+
+</html>
+
