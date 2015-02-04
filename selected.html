@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="text/javascript"></script>
+</head>
+
+<style type="text/css">
+
+  .container {
+    margin: 10vh 20vw 10vh 10vw;
+  }
+   
+  .selectors{
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+    padding-left: 15%;
+  }
+  .inline {
+    display: inline-block;
+  }
+  .selectorItem{
+    position: relative;
+    width: 20vw;
+    display: inline-block;
+  }
+
+  #selector-text{
+    text-align: center;
+  }
+.videowrapper {
+  background-color: black;
+  width: 100%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}
+
+iframe {
+  position: relative;
+  margin: 4% 30% 0 20%;
+}
+
+</style>
+
+
+<body>
+ <h1 id="selector-text"></h1>
+
+   <div class="container">
+
+  <div class="selectors">
+
+    <div class="selectorItem" >
+      <h3 id="sintel-title" class="inline"></h3>
+      <h6 id="sintel-duration" class="inline"></h6>
+      <h5 id="sintel-description"></h5>
+      <img id="sintel-thumbnail">
+      
+    </div>
+
+    <div class="selectorItem" >
+      <h3 id="bbb-title" class="inline"></h3>
+      <h6 id="bbb-duration" class="inline"></h6>
+      <h5 id="bbb-description" ></h5>
+      <img id="bbb-thumbnail">
+    </div>
+
+    <div class="selectorItem" >
+      <h3 id="walle-title" class="inline"></h3>
+      <h6 id="walle-duration" class="inline"></h6>
+      <h5 id="walle-description"></h5>
+      <img id="walle-thumbnail">
+    </div>
+  </div>
+  <div class="videowrapper">
+   <iframe id="videoplayer" width="560" height="349" frameborder="0">Your browser does not support HTML5 video.</iframe>
+  </div>
+  </div>
+</body>
+
+
+
+<script type="text/javascript">
+
+
+function parseResponse (data) {
+  var results = data.components[0];
+  var selectorText = results.config.views[1].text;
+  document.getElementById('selector-text').innerHTML = selectorText;
+
+  document.getElementById('sintel-title').innerHTML = results.config.views[2].title;
+  document.getElementById('sintel-description').innerHTML = results.config.views[2].description;
+  document.getElementById('sintel-thumbnail').src = results.config.views[2].thumbnail;
+  document.getElementById('sintel-duration').innerHTML = results.config.views[2].duration;
+  document.getElementById('sintel-title').parentNode.setAttribute("data-videoUrl", data.components[1].config.views[1].src )
+
+  document.getElementById('bbb-title').innerHTML = results.config.views[3].title;
+  document.getElementById('bbb-description').innerHTML = results.config.views[3].description;
+  document.getElementById('bbb-thumbnail').src = results.config.views[3].thumbnail;
+  document.getElementById('bbb-duration').innerHTML = results.config.views[3].duration;
+  document.getElementById('bbb-title').parentNode.setAttribute("data-videoUrl", data.components[2].config.views[4].src )
+
+
+  document.getElementById('walle-title').innerHTML = results.config.views[4].title;
+  document.getElementById('walle-description').innerHTML = results.config.views[4].description;
+  document.getElementById('walle-thumbnail').src = results.config.views[4].thumbnail;
+  document.getElementById('walle-duration').innerHTML = results.config.views[4].duration;
+  document.getElementById('walle-title').parentNode.setAttribute("data-videoUrl", data.components[3].config.views[4].src )
+
+
+};
+
+
+  
+var script = document.createElement('script');
+script.src = "http://nymeria.sel.ec/videos_for?_sm_cb=parseResponse";
+script.async = false;
+script.type = 'application/javascript';
+document.head.appendChild(script);
+
+$('.selectorItem').on("click", function(){
+  document.getElementById('videoplayer').src= this.getAttribute("data-videoUrl")
+});
+
+
+
+
+
+</script>
+
+</html>
