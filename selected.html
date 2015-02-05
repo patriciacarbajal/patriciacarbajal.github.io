@@ -4,12 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="text/javascript"></script>
-  </head>
+</head>
 
   <style type="text/css">
 
-    .container {
+    #container {
       margin: 10vh 20vw 10vh 10vw;
       font-family: Arial;
     }
@@ -23,6 +22,7 @@
     }
     .inline {
       display: inline-block;
+      padding-left: 2%;
     }
 
     .selectorItem{
@@ -62,43 +62,14 @@
 
   </style>
 
-
   <body>
 
-
-    <div class="container">
-
+    <div id="container">
       <h1 id="selector-text"></h1>
-
-      <div id="selectors">
-        <div class="selectorItem" >
-          <h3 id="sintel-title" class="inline"></h3>
-          <h6 id="sintel-duration" data-actualDuration="52000" class="inline"></h6>
-          <h5 id="sintel-description"></h5>
-          <img id="sintel-thumbnail">
-        </div>
-
-        <div class="selectorItem" >
-          <h3 id="bbb-title" class="inline"></h3>
-          <h6 id="bbb-duration" data-actualDuration="32000" class="inline"></h6>
-          <h5 id="bbb-description" ></h5>
-          <img id="bbb-thumbnail">
-        </div>
-
-        <div class="selectorItem" >
-          <h3 id="walle-title" class="inline"></h3>
-          <h6 id="walle-duration" data-actualDuration="150000" class="inline"></h6>
-          <h5 id="walle-description"></h5>
-          <img id="walle-thumbnail">
-        </div>
-      </div>
-
+      <div id="selectors"></div>
       <div id="videowrapper" class="hidden">
         <iframe id="videoplayer" width="560" height="349" autoplay frameborder="0"> </iframe>
       </div>
-
-    </div>
-
   </body>
 
 
@@ -109,29 +80,80 @@
       var selectorText = results.views[1].text
       document.getElementById('selector-text').innerHTML = selectorText;
 
-      document.getElementById('sintel-title').innerHTML = results.views[2].title;
-      document.getElementById('sintel-description').innerHTML = results.views[2].description;
-      document.getElementById('sintel-thumbnail').src = results.views[2].thumbnail;
-      document.getElementById('sintel-duration').innerHTML = results.views[2].duration;
-      document.getElementById('sintel-title').parentNode.setAttribute("data-videoUrl", data.components[1].config.views[1].src)
+      var len = results.views.length
 
-      document.getElementById('bbb-title').innerHTML = results.views[3].title;
-      document.getElementById('bbb-description').innerHTML = results.views[3].description;
-      document.getElementById('bbb-thumbnail').src = results.views[3].thumbnail;
-      document.getElementById('bbb-duration').innerHTML = results.views[3].duration;
-      document.getElementById('bbb-title').parentNode.setAttribute("data-videoUrl", data.components[2].config.views[4].src)
+      for (var i = 2; i < len; i++) {
+        var item = results.views[i]
+        var videoId = results.views[i].id
+        var selectorItemContainer = document.createElement('div');
+        selectorItemContainer.setAttribute("id", results.views[i].id)
+        selectorItemContainer.className += "selectorItem";
+        document.getElementById('selectors').appendChild(selectorItemContainer);
 
-      document.getElementById('walle-title').innerHTML = results.views[4].title;
-      document.getElementById('walle-description').innerHTML = results.views[4].description;
-      document.getElementById('walle-thumbnail').src = results.views[4].thumbnail;
-      document.getElementById('walle-duration').innerHTML = results.views[4].duration;
-      document.getElementById('walle-title').parentNode.setAttribute("data-videoUrl", data.components[3].config.views[4].src)
+        setTitle(item, selectorItemContainer);
+        setDuration(item, selectorItemContainer);
+        setThumbnail(item, selectorItemContainer);
+        setDescription(item, selectorItemContainer);
 
+        //these are just to set data attributes in the html to help pass the data.
+        if (videoId == "sintel") {
+          document.getElementById('sintel').setAttribute("data-videoUrl", data.components[1].config.views[1].src )
+          document.getElementById('sintel').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "54000")
+        }
+        if (videoId == "bbb") {
+          document.getElementById('bbb').setAttribute("data-videoUrl", data.components[2].config.views[4].src )
+          document.getElementById('bbb').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "34000")
+        }
+        if (videoId == "walle") {
+          document.getElementById('walle').setAttribute("data-videoUrl", data.components[3].config.views[4].src)
+          document.getElementById('walle').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "152000")
+
+        }
+      }   
     };
-      
-    var script = document.createElement('script');
-    script.src = "http://nymeria.sel.ec/videos_for?_sm_cb=parseResponse";
-    document.head.appendChild(script);
+
+    var setTitle = function(data, container) {
+      var videoTitle = document.createElement('h3');
+      videoTitle.innerHTML = data.title;
+      videoTitle.className += "title inline";
+      container.appendChild(videoTitle);
+
+    }
+
+    var setDuration = function(data, container) {
+      var duration = document.createElement('h6');
+      duration.innerHTML = data.duration;
+      duration.className += "duration inline";
+      container.appendChild(duration);
+    }
+
+    var setThumbnail = function(data, container) {
+      var thumbnail = document.createElement('img');
+      thumbnail.src = data.thumbnail;
+      thumbnail.className += "thumbnail";
+      container.appendChild(thumbnail);
+    }
+
+    var setDescription = function(data, container) {
+      var description = document.createElement('h5');
+      description.innerHTML = data.description;
+      description.className += "description" 
+      container.appendChild(description);
+
+    }
+    var ajaxRequest = function(url) {
+      try {
+            var script = document.createElement('script');
+            script.src = url;
+            document.head.appendChild(script);
+          }
+      catch(err){
+        alert("Error loading data: " + err)
+      }
+    }
+
+    ajaxRequest( "http://nymeria.sel.ec/videos_for?_sm_cb=parseResponse");
+
 
     var videowrapper = document.getElementById('videowrapper');
     var video = document.getElementsByTagName('iframe')[0];
@@ -152,16 +174,20 @@
     }
 
     //using this method to go back to selector screen because I was having cross-domain issues with the video tag, and with accessing the video in the iframe.  This works, as long as the duration is known.  The duration wasn't accurate in the data, so I hard-coded it for demonstration purposes.  
-    $('.selectorItem').click(function(){
+    $('body').on("click", ".selectorItem", function(e){
+      var target = e.target.parentNode;
+      console.log(target)
       //This would work if the duration in the data was accurate:
-      // var duration = parseFloat((this.getElementsByTagName('h6')[0].innerHTML).slice(-2)) * 2000 + 2000;
-      var duration = this.getElementsByTagName('h6')[0].getAttribute('data-actualDuration') + 2000;
-      var url = this.getAttribute("data-videoUrl");
+      // var duration = parseFloat((this.getElementsByTagName('h6')[0].innerHTML).slice(-2)) * 1000;\
+      console.log(target.getElementsByTagName('h6')[0])
+      var duration = target.getElementsByTagName('h6')[0].getAttribute('data-actualDuration');
+      var url = target.getAttribute("data-videoUrl");
       videowrapper.appendChild(video)
       video.src = url;
       show(videowrapper);  
       hide(selectors);
       hide(selectorText);
+      console.log(duration)
       setTimeout(videoEnded, duration);
     });
 
