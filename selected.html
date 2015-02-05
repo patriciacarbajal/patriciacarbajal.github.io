@@ -20,7 +20,6 @@
       margin: 0 auto;
       padding: 2% 3% 3% 12%;
       overflow: auto;
-
     }
 
     img {
@@ -30,7 +29,6 @@
     .description{
       padding-top: 10%;
     }
-
 
     .inline {
       display: inline-block;
@@ -45,7 +43,7 @@
       cursor: pointer;
     }
 
-    #selector-text{
+    #instruction-text{
      width: 100%;
      margin: 0 auto;
      padding: 2% 5% 3% 10%;
@@ -87,31 +85,12 @@
       }
     }
 
-    
-   @media only screen and (max-width : 375px) and (orientation : portrait) {
-      .selectorItem {
-        float: none;
-        display: block;
-        margin-left: 8%;
-        width: 80%;
-      }
-
-      iframe {
-        width: 100%;
-        margin: 10% 0 10% 0;
-      }
-
-      #videowrapper {
-        height: 50%;
-      }
-    }
-
   </style>
 
   <body>
 
     <div id="container">
-      <h1 id="selector-text"></h1>
+      <h1 id="instruction-text"></h1>
       <div id="selectors"></div>
       <div id="videowrapper" class="hidden">
         <iframe id="videoplayer" width="560" height="349" autoplay frameborder="0"> </iframe>
@@ -123,8 +102,8 @@
 
     function parseResponse (data) {
       var results = data.components[0].config;
-      var selectorText = results.views[1].text
-      document.getElementById('selector-text').innerHTML = selectorText;
+      var instructionText = results.views[1].text
+      document.getElementById('instruction-text').innerHTML = instructionText;
 
       var len = results.views.length
 
@@ -204,7 +183,7 @@
     var videowrapper = document.getElementById('videowrapper');
     var video = document.getElementsByTagName('iframe')[0];
     var selectors = document.getElementById('selectors');
-    var selectorText = document.getElementById('selector-text')
+    var instructionText = document.getElementById('instruction-text')
 
     var hide = function(element) {
       element.className += ' hidden'
@@ -216,7 +195,7 @@
     var videoEnded = function() {
       videowrapper.removeChild(video);
       show(selectors);
-      show(selectorText);
+      show(instructionText);
     }
 
     //using this method to go back to selector screen because I was having cross-domain issues with the video tag, and with accessing the video in the iframe.  This works, as long as the duration is known.  The duration wasn't accurate in the data, so I hard-coded it for demonstration purposes.  
@@ -232,7 +211,7 @@
       video.src = url;
       show(videowrapper);  
       hide(selectors);
-      hide(selectorText);
+      hide(instructionText);
       console.log(duration)
       setTimeout(videoEnded, duration);
     });
