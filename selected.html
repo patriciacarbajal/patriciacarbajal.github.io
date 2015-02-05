@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
+  </head>
 
   <style type="text/css">
 
@@ -85,6 +85,24 @@
       }
     }
 
+   @media only screen and (max-width : 375px) and (orientation : portrait) {
+      .selectorItem {
+        float: none;
+        display: block;
+        margin-left: 8%;
+        width: 80%;
+      }
+
+      iframe {
+        width: 100%;
+        margin: 10% 0 10% 0;
+      }
+
+      #videowrapper {
+        height: 50%;
+      }
+    }
+
   </style>
 
   <body>
@@ -95,77 +113,91 @@
       <div id="videowrapper" class="hidden">
         <iframe id="videoplayer" width="560" height="349" autoplay frameborder="0"> </iframe>
       </div>
+    </div>
+
   </body>
 
 
   <script type="text/javascript">
 
-    function parseResponse (data) {
-      var results = data.components[0].config;
-      var instructionText = results.views[1].text
-      document.getElementById('instruction-text').innerHTML = instructionText;
-
-      var len = results.views.length
-
-      for (var i = 2; i < len; i++) {
-        var item = results.views[i]
-        var videoId = results.views[i].id
-        var selectorItemContainer = document.createElement('div');
-        selectorItemContainer.setAttribute("id", results.views[i].id)
-        selectorItemContainer.className += "selectorItem";
-        document.getElementById('selectors').appendChild(selectorItemContainer);
-
-        setTitle(item, selectorItemContainer);
-        setDuration(item, selectorItemContainer);
-        setThumbnail(item, selectorItemContainer);
-        setDescription(item, selectorItemContainer);
-
-        //these are just to set data attributes in the html to help pass the data.
-        if (videoId == "sintel") {
-          document.getElementById('sintel').setAttribute("data-videoUrl", data.components[1].config.views[1].src )
-          document.getElementById('sintel').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "54000")
-        }
-        if (videoId == "bbb") {
-          document.getElementById('bbb').setAttribute("data-videoUrl", data.components[2].config.views[4].src )
-          document.getElementById('bbb').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "34000")
-        }
-        if (videoId == "walle") {
-          document.getElementById('walle').setAttribute("data-videoUrl", data.components[3].config.views[4].src)
-          document.getElementById('walle').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "152000")
-
-        }
-      }   
+   function BuildSelectors(data) {
+      this.dataConfig = data.components[0].config;
+      this.instructionText = this.dataConfig.views[1].text;
+      document.getElementById('instruction-text').innerHTML = this.instructionText;
+      this.container = new Container(this.dataConfig, data);
     };
 
-    var setTitle = function(data, container) {
+    function Container(dataConfig, originalData) {
+      var selectorItemContainer = [];
+      var len = dataConfig.views.length;
+      var i = 2;
+      for (i; i < len; i++) {
+        var item = dataConfig.views[i];
+        var videoId = dataConfig.views[i].id;
+        selectorItemContainer[i] = document.createElement('div');
+        selectorItemContainer[i].setAttribute("id", videoId);
+        selectorItemContainer[i].className += "selectorItem";
+        document.getElementById('selectors').appendChild(selectorItemContainer[i]);
+        this.setTitle(item, selectorItemContainer[i]);
+        this.setDuration(item, selectorItemContainer[i]);
+        this.setThumbnail(item, selectorItemContainer[i]);
+        this.setDescription(item, selectorItemContainer[i]);
+        this.setDataAttributes(originalData, videoId);
+      }
+
+    }
+
+    //title and duration get 'inline' class for styling purposes
+    Container.prototype.setTitle = function(dataConfig, container) {
       var videoTitle = document.createElement('h3');
-      videoTitle.innerHTML = data.title;
+      videoTitle.innerHTML = dataConfig.title;
       videoTitle.className += "title inline";
       container.appendChild(videoTitle);
 
     }
 
-    var setDuration = function(data, container) {
+    Container.prototype.setDuration = function(dataConfig, container) {
       var duration = document.createElement('h6');
-      duration.innerHTML = data.duration;
+      duration.innerHTML = dataConfig.duration;
       duration.className += "duration inline";
       container.appendChild(duration);
     }
 
-    var setThumbnail = function(data, container) {
+    Container.prototype.setThumbnail = function(dataConfig, container) {
       var thumbnail = document.createElement('img');
-      thumbnail.src = data.thumbnail;
+      thumbnail.src = dataConfig.thumbnail;
       thumbnail.className += "thumbnail";
       container.appendChild(thumbnail);
     }
 
-    var setDescription = function(data, container) {
+    Container.prototype.setDescription = function(dataConfig, container) {
       var description = document.createElement('h5');
-      description.innerHTML = data.description;
-      description.className += "description" 
+      description.innerHTML = dataConfig.description;
+      description.className += "description";
       container.appendChild(description);
-
     }
+
+    Container.prototype.setDataAttributes = function(data, videoId) {
+    //hard-coded actual video durations (plus 2 seconds) to use below, since the duration given in data isn't accurate
+        if (videoId == "sintel") {
+          document.getElementById('sintel').setAttribute("data-videoUrl", data.components[1].config.views[1].src );
+          document.getElementById('sintel').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "54000");
+        }
+        if (videoId == "bbb") {
+          document.getElementById('bbb').setAttribute("data-videoUrl", data.components[2].config.views[4].src );
+          document.getElementById('bbb').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "34000");
+        }
+        if (videoId == "walle") {
+          document.getElementById('walle').setAttribute("data-videoUrl", data.components[3].config.views[4].src);
+          document.getElementById('walle').getElementsByTagName('h6')[0].setAttribute('data-actualDuration', "152000");
+        };
+    }
+
+    //JSONP callback function
+    function parseResponse(data) {
+      var response = new BuildSelectors(data);
+    };
+
     var ajaxRequest = function(url) {
       try {
             var script = document.createElement('script');
@@ -173,23 +205,23 @@
             document.head.appendChild(script);
           }
       catch(err){
-        alert("Error loading data: " + err)
-      }
-    }
+        alert("Error loading data: " + err);
+      };
+    };
 
     ajaxRequest( "http://nymeria.sel.ec/videos_for?_sm_cb=parseResponse");
-
 
     var videowrapper = document.getElementById('videowrapper');
     var video = document.getElementsByTagName('iframe')[0];
     var selectors = document.getElementById('selectors');
-    var instructionText = document.getElementById('instruction-text')
+    var instructionText = document.getElementById('instruction-text');
 
     var hide = function(element) {
-      element.className += ' hidden'
+      element.className += ' hidden';
     }
+
     var show = function(element) {
-      element.classList.remove('hidden')
+      element.classList.remove('hidden');
     }
 
     var videoEnded = function() {
@@ -201,10 +233,8 @@
     //using this method to go back to selector screen because I was having cross-domain issues with the video tag, and with accessing the video in the iframe.  This works, as long as the duration is known.  The duration wasn't accurate in the data, so I hard-coded it for demonstration purposes.  
     $('body').on("click", ".selectorItem", function(e){
       var target = e.target.parentNode;
-      console.log(target)
       //This would work if the duration in the data was accurate:
       // var duration = parseFloat((this.getElementsByTagName('h6')[0].innerHTML).slice(-2)) * 1000;\
-      console.log(target.getElementsByTagName('h6')[0])
       var duration = target.getElementsByTagName('h6')[0].getAttribute('data-actualDuration');
       var url = target.getAttribute("data-videoUrl");
       videowrapper.appendChild(video)
@@ -212,12 +242,9 @@
       show(videowrapper);  
       hide(selectors);
       hide(instructionText);
-      console.log(duration)
       setTimeout(videoEnded, duration);
     });
 
-</script>
+  </script>
 
 </html>
-
-
