@@ -1,6 +1,6 @@
 html {
   background-color: #ffffff;
- font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
   }
 
 
-  #nav {
+#nav {
   display: inline-block;
   padding: 2%;
   font-weight: bold;
@@ -29,6 +29,7 @@ header {
   float: right;
   margin-right: 2%;
 }
+
 .personal {
   border: 1px black solid;
   background-color: red;
@@ -42,7 +43,6 @@ header {
 img {
   width: 100%;
   }
-
 
 .small {
   width: 50%;
@@ -88,10 +88,10 @@ img {
 
 
 #icons {
-float: both;
-background-color: red;
-height: 25%;
-width: 100%;
+  float: both;
+  background-color: red;
+  height: 25%;
+  width: 100%;
 }
 
 #icons p {
@@ -109,7 +109,7 @@ p a{
 footer {
   text-align: center;
   padding: 1%;
-  font: 2wv;
+  font: 2vw;
   }
 
   @media only screen and (orientation: portrait){

@@ -117,13 +117,14 @@ p a{
 footer {
   text-align: center;
   padding: 1%;
-  font: 2wv;
+  font: 2vw;
   }
 
-  @media only screen and (orientation: portrait){
-header {
-  height: 20% !important;
+@media only screen and (orientation: portrait){
+  header {
+    height: 20% !important;
  }
+ 
  #title {
   padding-top: 20%;
  }
