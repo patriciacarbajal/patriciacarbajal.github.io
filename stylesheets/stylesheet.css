@@ -39,8 +39,8 @@ a {
 
 footer {
   text-align: center;
-  padding: 1%;
-  font: 2wv;
+  padding: 3%;
+  font: 1wv;
 }
 
 .blinking {
@@ -103,27 +103,4 @@ footer {
 .projects-container .small {
   width: 50%;
   margin: 0 25% 10% 25%;
-}
-
-
-@media only screen and (orientation: portrait){
-
-  .lower {
-    width: 24%;
-  }
-
-  #white {
-    padding-top: 10%;
-  }
-
-  #black {
-   padding-top: 10%;
-  }
-
-  #icons {
-
-  padding-top: 5%;
-  padding-bottom: 5%;
-  }
-
 }
