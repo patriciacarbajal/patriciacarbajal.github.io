@@ -5,51 +5,60 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <title>Patricia Carbajal</title>
 </head>
 
 <body>
 
     <div id="container">
-        <header id="indexheader">
-            <p>Software Engineer</p>
-        </header>
-
-        <div class="black upper left">
-            <h1 id="white">Patricia</h1>
-        </div>
-        <div class="white upper right">
-            <h1 id="black">Carbajal</h1>
-        </div>     
-    </div>
-        <div class="black lower">
-            <div class="circle white"><a href="about.html" class="nav" id="about">About</a>
-            </div>
-        </div>
-        <div class="white lower">
-            <div class="circle black"><a href="blogposts.html" class="nav" id="blog">Blog</a>
-            </div>
-        </div>
-        <div class="black lower">
-            <div class="circle white"><a href="portfolio.html" class="nav" id="projects">Projects</a>
-            </div>
-        </div>
-        <div class="white lower">
-            <div class="circle black"><a href="contact.html" class="nav" id="contact">Contact</a>
-            </div>
+        <h1 class="name">:> Patricia Carbajal<span class="blinking">_</span></h1>
+        <p class="subtext">Software Engineer at ShopKeep in NYC, working with Ruby on Rails and React JS</p>
     </div>
 
+    <div id="contact">
+        <p>I'd love to hear from you!</p><br>
+        <p><a href="mailto:carbajal.patricia@gmail.com?Subject=Hello%20Patricia" target="_top">carbajal.patricia@gmail.com</a></p>
+    </div>
 
-    <div id="icons">
-        <p><a href="https://github.com/patriciacarbajal"><i class="fa fa-github-square fa-3x" title="Github"></i></a></p>
-        <p><a href="https://www.facebook.com/weeone"><i class="fa fa-facebook-square fa-3x" title="Facebook"></i></a></p>
-        <p><a href="https://plus.google.com/u/0/100825623554670785838/posts?promo=notifications&cfem=1"><i class="fa fa-google-plus-square fa-3x" title="Google Plus"></i></a></p>
-        <p><a href="https://twitter.com/patti_carbajal"><i class="fa fa-twitter fa-3x" title="Twitter"></i></a></p>
-        <footer>
-            <h4>&copy; Patricia Carbajal 2016</h4>
-        </footer>
+    <a href="" id="projects"><span class='blinking'>&caron;</span>A few things I've worked on<span class='blinking'>&caron;</span></a>
+<!-- <a href="https://github.com/patriciacarbajal"><i class="fa fa-github-square fa-3x" title="Github"></i></a>
+ -->   
+
+
+    <section class="projects-container">
+
+        <h2 id="project-title">mood-ring.com(beta - please view in Chrome for best experience)</h2>
+        <p class="description">A mood-based music player with 3D interactive visualizer and crowdsourced song/mood database (utilizing three.js library for animation and Web Audio API to analyze music frequency data) (January 2015) </p>
+        <a href="http://mood-ring.com">
+            <img class="small" src  ="imgs/moodring_screenshot.png">
+        </a>
+
+        <h2 id="project-title">hamster-dreams.com</h2>
+        <p class="description"> Contracted work - A personal image blog and Content Management System (January 2015) </p>
+        <a href="http://hamster-dreams.com">
+            <img class="small" src  ="imgs/hamster-dreams-screenshot.png">
+        </a>
+
+        <h2 id="project-title">Theremouse interactive theremin</h2>
+        <p class="description">Theremouse interactive theremin built during a 7 hour hackathon at Spotify in NYC - multiuser and interactive (February 2015)</p>
+        <a href="../theremouse/spotify.html">
+           <img class="small" src  ="imgs/theremouse.png">
+        </a>
+
+    </section>
+
+        
+    <footer>
+        <h4>&copy; Patricia Carbajal 2016</h4>
+    </footer>
 </body>
+
+    <script type="text/javascript">
+      $('#projects').click(function() {
+        $('.projects-container').show();
+      });
+
+    </script>
 
 </html>

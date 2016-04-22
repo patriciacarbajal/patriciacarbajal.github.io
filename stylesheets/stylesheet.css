@@ -2,10 +2,12 @@
 * {
 margin:0;
 padding:0;
+
 }
 
 body {
-font-family: 'Montserrat Alternates', serif;
+  font-family: "Courier New";
+  text-align: center;
 }
 
 #container {
@@ -18,160 +20,110 @@ font-family: 'Montserrat Alternates', serif;
   margin: 0 25% 5% 25%;
 }
 
- header {
-  color: red;
-  font-size: 1.5vw !important;
-  text-align: right !important;
-  width: 50% !important;
-  margin: 0 15% 0% 25% !important;
-  padding: 0 1% 0 1% !important;
-  position: absolute; !important;
-  top: 40% !important;
-}
 
-
-h1 {
-  font-size: 10vw;
+.name {
+  font-size: 6vw;
+  width: inherit;
 }
-
-#white {
-  padding-right: 2% !important;
-  color: white;
-  text-align: right !important;
-}
-
-#black {
- padding-left: 2%;
-}
-
-.upper {
- display: inline-block;
- width: 49.5%;
- padding-bottom: 20%;
-}
-
-.lower {
-  display: inline-block;
-  width: 24.35%;
-  padding-bottom: 2%;
-
-}
-
-.lower .black:hover {
-  background-color: white;
-}
-.lower .white:hover {
-  background-color: black;
-}
-
-.black {
-  background-color: black;
-  color: white;
-}
-
-.white {
-  background-color: white;
-}
-.circle {
-  width: 84%;
-  padding-bottom: 35%;
-  border-radius: 100%;
-  margin-left: 8%;
-  margin-top: 8%;
-}
-
-.nav {
-  display: block;
-  margin: 0 auto;
-/*  padding-top: 35%;
-*/  color: red;
-  padding: 35% 5% 0% 5%;
-}
-
 
 #contact {
- width: 80% !important;
+  padding-bottom: 10%;
 }
-
-#about {
-  
-  width: 60% !important;
-}
-
-#blog {
-  width: 45% !important;
-}
-
-#projects {
-  width: 75% !important;
-}
-
 
 a {
-  color: red;
-  font-size: 4vw;
+  font-size: 2vw;
   text-decoration: none;
-}
-
-.fa:hover {
-  color: white;
-}
-
-
-#icons {
-float: both;
-background-color: red;
-height: 25%;
-width: 100%;
-}
-
-#icons p {
-  float: both;
-  width: 15%;
-  display: inline-block;
-  padding: 2% 4.5% 2% 4.5%;
-}
-
-p a{
   color: black;
-
 }
+
 
 footer {
   text-align: center;
   padding: 1%;
   font: 2wv;
+}
+
+.blinking {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
   }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.projects-container {
+  padding-top: 50px;
+}
+
+.projects-container .small {
+  width: 50%;
+  margin: 0 25% 10% 25%;
+}
 
 
 @media only screen and (orientation: portrait){
-header {
-  top: 35% !important;
- }
 
- .upper {
- display: inline-block;
- width: 49.5%;
- padding-bottom: 50%;
- padding-top: 30%;
-}
+  .lower {
+    width: 24%;
+  }
 
-.lower {
-  width: 24%;
-}
+  #white {
+    padding-top: 10%;
+  }
 
-#white {
-  padding-top: 10%;
-}
+  #black {
+   padding-top: 10%;
+  }
 
-#black {
- padding-top: 10%;
-}
+  #icons {
 
-#icons {
-
-padding-top: 5%;
-padding-bottom: 5%;
-}
+  padding-top: 5%;
+  padding-bottom: 5%;
+  }
 
 }
