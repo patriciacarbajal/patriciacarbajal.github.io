@@ -1,2 +1,2 @@
-patriciacarbajal.github.io
+patriciacarbajal.com
 ==========================
